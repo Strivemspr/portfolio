@@ -8,12 +8,12 @@ const footer = () => {
             <section className="social-media">
                 <a href="mailto:marlonspr@hotmail.com?subject=We Would Like To Offer You (An/A) (Internship/Job) At Our Company&#38;body=You Have Been Hired Congratulations! ✔✔">marlonspr@hotmail.com</a>
                 <section className="social-media__links">
-                    <a className="social-media__link" href="https://www.behance.net/marlonparra"><FaBehanceSquare size={25} className="social-media__icon" /></a>
-                    <a className="social-media__link" href="https://github.com/Strivemspr"><FaGithub size={25} className="social-media__icon"/></a>
-                    <a className="social-media__link" href="https://dev.to/marlonry"><FaDev size={25} className="social-media__icon"/></a>
-                    <a className="social-media__link" href="https://www.instagram.com/koaasy/"><FaInstagram size={25} className="social-media__icon"/></a>
-                    <a className="social-media__link" href="https://www.goodreads.com/user/show/135588898-marlon"><FaGoodreads size={25} className="social-media__icon"/></a>
-                    <a className="social-media__link" href="mailto:marlonspr@hotmail.com?subject=We Would Like To Offer You (An/A) (Internship/Job) At Our Company&#38;body=You Have Been Hired Congratulations! ✔✔"><FaTelegramPlane size={25} className="social-media__icon"/></a>
+                    <a className="social-media__link" aria-label="icon" href="https://www.behance.net/marlonparra"><FaBehanceSquare size={25} className="social-media__icon" /></a>
+                    <a className="social-media__link" aria-label="icon" href="https://github.com/Strivemspr"><FaGithub size={25} className="social-media__icon"/></a>
+                    <a className="social-media__link" aria-label="icon" href="https://dev.to/marlonry"><FaDev size={25} className="social-media__icon"/></a>
+                    <a className="social-media__link" aria-label="icon" href="https://www.instagram.com/koaasy/"><FaInstagram size={25} className="social-media__icon"/></a>
+                    <a className="social-media__link" aria-label="icon" href="https://www.goodreads.com/user/show/135588898-marlon"><FaGoodreads size={25} className="social-media__icon"/></a>
+                    <a className="social-media__link" aria-label="icon" href="mailto:marlonspr@hotmail.com?subject=We Would Like To Offer You (An/A) (Internship/Job) At Our Company&#38;body=You Have Been Hired Congratulations! ✔✔"><FaTelegramPlane size={25} className="social-media__icon"/></a>
                 </section>
             </section>
             <p>Made With <IconContext.Provider value={{color: 'red'}}><FaHeart/></IconContext.Provider> by Marlon Parra | © All Rights Reserved {new Date().getFullYear()}</p>
