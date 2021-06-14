@@ -1,0 +1,51 @@
+/* HTML elements */
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: var(--lineHeight-normal);
+  font-size: var(--fontSize-root);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+
+  @media screen and (max-width: 950px) {
+    font-size: 52%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Quicksand", sans-serif;
+
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  flex: 1;
+}
+
+a {
+  color: var(--color-black-text);
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-white-text);
+}

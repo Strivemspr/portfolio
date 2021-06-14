@@ -1,0 +1,13 @@
+.text-decoration {
+    background-color: var(--color-primary);
+    padding: 0 1rem;
+    color: white;
+    display: inline-block;
+    transform-origin: center;
+    transition: all .3s ease-in-out;
+     
+    &:hover {
+        transform: translateY(-3px) rotate(-5deg) scale(1.03);
+        box-shadow: 0 4px 7px 0 rgba(var(--color-shadow), .2);
+    }
+}

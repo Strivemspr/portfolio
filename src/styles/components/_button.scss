@@ -1,0 +1,28 @@
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    display: inline-flex;
+    transition: all .3s ease-in;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        color: var(--color-white-text);
+        background-color: var(--color-secondary);
+        box-shadow: 0 0 0 3px var(--color-secondary) inset;
+    }
+
+    &-filled {
+        color: var(--color-white-text);
+        background-color: var(--color-primary);
+    }
+    
+    &-outline {
+        color: var(--color-primary);
+        // border: .3rem solid var(--color-primary);
+        box-shadow: 0 0 0 3px var(--color-primary) inset;
+    }
+}

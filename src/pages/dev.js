@@ -51,7 +51,7 @@ const Index = ({ data, location }) => {
                           {tools && tools.map((tool, index) => {
                             const toolImage = getImage(tool);
                             return (
-                              <GatsbyImage loading="lazy" className="post-image" image={toolImage} alt="Image"/>
+                              <GatsbyImage loading="eager" className="post-image" image={toolImage} alt="Image"/>
                             )
                           })}
                         </section>
@@ -102,7 +102,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "design" } } }
+      filter: { frontmatter: { type: { eq: "development" } } }
     ) {
       nodes {
         excerpt

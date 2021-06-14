@@ -1,0 +1,23 @@
+.about {
+    padding: 6rem 0 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 950px) {
+        padding: 0;
+        margin-bottom: 6rem;
+    }
+
+    &__description {
+        margin-left: 5rem;
+        max-width: 50%;
+        cursor: default;
+
+        p {
+            white-space: pre-wrap;
+            margin: 3rem 0;
+        }
+    }
+}
+

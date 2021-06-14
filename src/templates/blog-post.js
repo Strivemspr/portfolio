@@ -1,13 +1,15 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Button from "../components/button"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const featuredImage = getImage(post.frontmatter.featuredImage);
+  const readingTime = post.fields.readingTime.text;
   const { previous, next } = data
 
   return (
@@ -22,19 +24,19 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <section className="banner">
+            <GatsbyImage className="banner__wrapper" imgClassName="banner__image" loading="lazy" image={featuredImage} alt="Image Banner"></GatsbyImage>
+            <h2 itemProp="headline" className="banner__title">{post.frontmatter.title}</h2>
+            <small className="banner__reading-time">{readingTime}</small>
+          </section>
         </header>
-        <section
+        <section className="blog-post__content"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className="blog-nav">
+        <hr className="blog-nav__separator"/>
         <ul
           style={{
             display: `flex`,
@@ -46,16 +48,18 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              // <Link to={previous.fields.slug} rel="prev">
+              //   ← {previous.frontmatter.title}
+              // </Link>
+              <Button type="outline" isInternal={true} link={previous.fields.slug} value={`← ${previous.frontmatter.title}`}></Button>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              // <Link to={next.fields.slug} rel="next">
+              //   {next.frontmatter.title} →
+              // </Link>
+              <Button type="filled" isInternal={true} link={next.fields.slug} value={`${next.frontmatter.title} →`}></Button>
             )}
           </li>
         </ul>
@@ -81,10 +85,26 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData (
+              transformOptions: {
+                fit: COVER,
+                cropFocus: ATTENTION,
+              }
+              placeholder: TRACED_SVG,
+            )
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

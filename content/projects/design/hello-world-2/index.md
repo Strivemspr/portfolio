@@ -1,7 +1,14 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: Hello World 2
+date: "2015-05-03T22:12:03.284Z"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
+type: "design"
+featuredImage: ../../../../src/images/libera.png
+buttons: [
+    {"value": "See More", "isInternal": true, "icon": "FaCaretRight", "type": "filled"},
+    {"value": "Source", "isInternal": false, "icon": "FaGithub", "type": "outline", "link": "https://github.com/Strivemspr/Natours"},
+]
+tools: ["../../../../src/images/tools/figma.png", "../../../../src/images/tools/illustrator.png"]
 ---
 
 This is my first post on my new fake blog! How exciting!
