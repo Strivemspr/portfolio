@@ -25,11 +25,13 @@ const About = ({ data, location }) => {
           <h1>Hi! I'm <span className="text-decoration">Marlon Parra</span> 🧑👩‍💻</h1>
           <p>I'm a Front-End Developer &#38; UX/UI designer, Originally from Colombia but moved to New Zealand 8 years ago.<br /><br />
 
-          I believe that we shouldn’t make things harder than they need to be, which is why my main aim as a designer is to help others by making the complex simple.<br /><br />
-                                                                                                                              
-          While I like simplicity, my background is not exactly so. I am a proud Thai &#38; Dutch "halfie" or as you would say in Thai, ลูกครึ่ง (luuk khrueng), literally meaning "half child".<br /><br />
+          I believe that good design starts with an understanding of <span className="text-decoration">humans</span> and <span className="text-decoration">technology</span>, that's why I enjoy building meaningful relationships with people and improving my technical skills.<br /><br />
 
-          Being of mixed heritage and having been directly exposed to both eastern and western cultures has helped me to be more open minded and understanding of people from various backgrounds and experiences. Which, in turn has resulted in a stronger sense of empathy and desire to help people in any way I am capable of.</p>
+          Being exposed to different cultures in New Zealand has allowed me to be more opened minded and understanding of people from different countries and backgrounds.<br /><br />
+                                                                                                                              
+          Having the ability to <span className="text-decoration">design</span> and <span className="text-decoration">code</span> has open the doors for me to see projects more clearly from both perspectives. I enjoy both design and code equally, I love being creative and applying what I learn on a daily basis.<br /><br />
+
+          In my free time I enjoy going to the gym, reading books, designing, coding, and drawing although I haven't had much time to draw lately, I also enjoy writing coding blog posts on DEV.to. I’d love to have more friends that are interested in design or code or to talk about anything. So, check my social media and <span className="text-decoration">connect</span> with me. 😀</p>
           <Button isInternal={false} type="filled" icon="FaLink" link="../../../marlon-parra-cv.pdf" value="My CV"></Button>
         </div>
       </section>

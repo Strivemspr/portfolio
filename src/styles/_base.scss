@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   width: 100%;
   margin: auto;
   flex: 1;

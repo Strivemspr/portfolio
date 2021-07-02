@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { FaCaretRight, FaGithub, FaLink } from 'react-icons/fa';
+import { FaCaretRight, FaGithub, FaLink, FaFigma } from 'react-icons/fa';
 
 const Button = ({ type, value, icon, link, isInternal}) => {
     if(icon === 'FaLink') {
@@ -9,6 +9,8 @@ const Button = ({ type, value, icon, link, isInternal}) => {
         icon = <FaGithub/>
     } else if(icon === 'FaCaretRight') {
         icon = <FaCaretRight/>
+    } else if(icon === 'FaFigma') {
+        icon = <FaFigma/>
     }
 
     console.log(link)
