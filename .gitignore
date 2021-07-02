@@ -1,3 +1,6 @@
+#images
+src/images/uncompressed
+
 # Logs
 logs
 *.log
