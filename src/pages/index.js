@@ -12,7 +12,7 @@ const Index = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="UI/UX Projects" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -24,7 +24,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="UI/UX Projects" />
       <ol className="postsContainer">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -47,11 +47,11 @@ const Index = ({ data, location }) => {
                         <h2>
                           <span itemProp="headline">{title}</span>
                         </h2>
-                        <section class="post-tools">
+                        <section className="post-tools">
                           {tools && tools.map((tool, index) => {
                             const toolImage = getImage(tool);
                             return (
-                              <GatsbyImage loading="lazy" className="post-image" image={toolImage} alt="Image"/>
+                              <GatsbyImage loading="lazy" className="post-image" image={toolImage} alt="Image" key={index} />
                             )
                           })}
                         </section>
@@ -79,7 +79,7 @@ const Index = ({ data, location }) => {
                     </section>
                   </div>
                   <div className="post-image-container">
-                    <GatsbyImage loading="lazy" image={image} alt="Porfolio Image"/>
+                    <GatsbyImage loading="lazy" image={image} alt="Porfolio-Image"/>
                   </div>
                 </article>
              

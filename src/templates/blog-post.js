@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const featuredImage = getImage(post.frontmatter.featuredImage);
   const readingTime = post.fields.readingTime.text;
-  const { previous, next } = data
+  const { previous, next } = data;
 
   return (
     <Layout location={location} title={siteTitle}>

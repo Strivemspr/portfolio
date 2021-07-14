@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Marlon Portfolio`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Marlon Parra`,
+      summary: `I like design and code`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Marlon portfolio, I am currently looking for work opportunities in the design or development field, Hire me!!`,
+    siteUrl: `https://marlonparra.com/`,
     social: {
-      twitter: `kylemathews`,
+      // twitter: `kylemathews`,
     },
   },
   plugins: [
@@ -123,13 +123,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Marlon Portfolio`,
+        short_name: `Marlon Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-small.png`, // This path is relative to the root of the site.
       },
     },
     {

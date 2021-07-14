@@ -57,6 +57,7 @@
             margin-top: 3rem;
             order: 2;
             width: 100%;
+            padding: 0;
         }
         
         header {
@@ -85,11 +86,27 @@
     &-header {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h2 {
+            @media screen and (max-width: 500px) {
+                margin-bottom: 1rem;
+            }
+        }
     }
 
     &-tools {
         display: inline-flex;
         margin-left: 1rem;
+
+        @media screen and (max-width: 500px) {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
     }
 
     &-image {

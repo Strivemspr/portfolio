@@ -12,7 +12,7 @@ const Index = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Dev Projects" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -24,13 +24,19 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Dev Projects" />
       <ol className="postsContainer">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           const image = getImage(post.frontmatter.featuredImage)
           const readingTime = post.fields.readingTime.text
           const buttons = post.frontmatter.buttons;
+
+          //to delete
+          console.log(buttons);
+          const isInternal = buttons.some(button => button.isInternal);
+          console.log(isInternal);
+
           const tools = post.frontmatter.tools;
 
           return (
@@ -47,11 +53,11 @@ const Index = ({ data, location }) => {
                         <h2>
                           <span itemProp="headline">{title}</span>
                         </h2>
-                        <section class="post-tools">
+                        <section className="post-tools">
                           {tools && tools.map((tool, index) => {
                             const toolImage = getImage(tool);
                             return (
-                              <GatsbyImage loading="eager" className="post-image" image={toolImage} alt="Image"/>
+                              <GatsbyImage loading="eager" className="post-image" image={toolImage} alt="Image" key={index} />
                             )
                           })}
                         </section>
@@ -79,7 +85,7 @@ const Index = ({ data, location }) => {
                     </section>
                   </div>
                   <div className="post-image-container">
-                    <GatsbyImage loading="lazy" image={image} alt="Porfolio Image"/>
+                    <GatsbyImage loading="lazy" image={image} alt="Porfolio-Image"/>
                   </div>
                 </article>
              
